@@ -71,7 +71,7 @@ class MediaAdmin extends Admin
         // Allow path in id parameter
         $collection->add('view', $this->getRouterIdParameter() . '/view', array(), array('id' => '.+', '_method' => 'GET'));
         $collection->add('show', $this->getRouterIdParameter() . '/show', array(
-                '_controller' => sprintf('%s:%s', $this->baseControllerName, 'view')
+                '_controller' => sprintf('%s:%s', $this->baseControllerName, 'show')
             ),
             array('id' => '.+', '_method' => 'GET')
         );
